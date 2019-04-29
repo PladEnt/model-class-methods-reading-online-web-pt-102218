@@ -8,6 +8,7 @@ class Post < ActiveRecord::Base
   def self.by_author(author_id)
     where(author: author_id)
   end
+<<<<<<< HEAD
 
   def self.from_today
     where("created_at >=?", Time.zone.today.beginning_of_day)
@@ -16,6 +17,8 @@ class Post < ActiveRecord::Base
   def self.old_news
     where("created_at <?", Time.zone.today.beginning_of_day)
   end
+=======
+>>>>>>> c469f7a218de4f4aa7d3d89025f411f3e6cacd5b
 
   private
 
